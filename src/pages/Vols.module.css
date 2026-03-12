@@ -1,0 +1,41 @@
+.section { padding: var(--section-pad-y) var(--section-pad-x); background: var(--sky); position: relative; overflow: hidden; }
+.box { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.1); border-top: 3px solid var(--gold); padding: 2.5rem; margin-top: 2.5rem; }
+.tabs { display: flex; gap: 0; margin-bottom: 2rem; flex-wrap: wrap; }
+.tabBtn {
+  padding: 0.6rem 1.5rem; background: none;
+  border: 1px solid rgba(255,255,255,0.15); color: rgba(255,255,255,0.5);
+  font-family: var(--font-body); font-size: 0.72rem; font-weight: 600;
+  letter-spacing: 0.1em; text-transform: uppercase; cursor: pointer; transition: var(--transition);
+}
+.tabBtn:hover, .activeTab { background: rgba(201,168,76,0.2); color: var(--gold); border-color: var(--gold); }
+.row { display: flex; gap: 1rem; align-items: flex-end; flex-wrap: wrap; margin-bottom: 1.5rem; }
+.field { display: flex; flex-direction: column; gap: 0.4rem; flex: 1; min-width: 150px; }
+.field label { font-size: 0.6rem; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(255,255,255,0.4); font-weight: 600; }
+.input {
+  background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.12);
+  color: white; padding: 0.85rem 1rem; font-family: var(--font-body); font-size: 0.82rem;
+  outline: none; transition: border-color 0.3s; width: 100%; appearance: none;
+}
+.input:focus { border-color: rgba(201,168,76,0.5); }
+.swap { font-size: 1.4rem; color: var(--gold); cursor: pointer; padding: 0.85rem 0.5rem; transition: transform 0.3s; align-self: flex-end; flex-shrink: 0; background:none; border:none; }
+.swap:hover { transform: rotate(180deg); }
+.grid4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; margin-bottom: 1.5rem; }
+.colBox { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); padding: 1.2rem; display: flex; flex-direction: column; gap: 0.7rem; }
+.colTitle { font-size: 0.62rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); font-weight: 700; border-bottom: 1px solid rgba(201,168,76,0.15); padding-bottom: 0.6rem; }
+.counterRow { display: flex; justify-content: space-between; align-items: center; gap: 0.5rem; }
+.counterLabel { font-size: 0.72rem; color: rgba(255,255,255,0.55); flex: 1; line-height: 1.4; }
+.counterLabel small { display: block; font-size: 0.58rem; color: rgba(255,255,255,0.25); }
+.counter { display: flex; align-items: center; border: 1px solid rgba(255,255,255,0.1); flex-shrink: 0; }
+.counter button { width: 28px; height: 30px; background: rgba(201,168,76,0.1); border: none; color: var(--gold); font-size: 1rem; cursor: pointer; font-weight: 700; }
+.counter span { width: 28px; text-align: center; color: white; font-size: 0.85rem; font-weight: 700; }
+.checkLabel { display: flex; align-items: center; gap: 0.5rem; cursor: pointer; font-size: 0.72rem; color: rgba(255,255,255,0.55); }
+.radioLabel { display: flex; align-items: flex-start; gap: 0.5rem; cursor: pointer; font-size: 0.7rem; color: rgba(255,255,255,0.55); line-height: 1.4; }
+.searchBtn {
+  background: linear-gradient(135deg, var(--gold), var(--dune)); color: var(--dark);
+  border: none; padding: 1rem 3rem; font-family: var(--font-body); font-size: 0.82rem;
+  font-weight: 800; letter-spacing: 0.15em; text-transform: uppercase; cursor: pointer;
+  transition: var(--transition); width: 100%; min-height: 50px;
+}
+.searchBtn:hover { transform: translateY(-2px); box-shadow: 0 10px 30px rgba(201,168,76,0.35); }
+@media (max-width: 1200px) { .grid4 { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 599px) { .grid4 { grid-template-columns: 1fr; } }

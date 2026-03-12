@@ -1,0 +1,65 @@
+/* ═══════════════════════════════════════════
+   AUTHENTIKA TRAVEL — CSS DESIGN TOKENS
+   ═══════════════════════════════════════════ */
+:root {
+  /* Brand Palette */
+  --gold: #C9A84C;
+  --gold-light: #E8C97A;
+  --gold-pale: #F5EDD5;
+  --sand: #D4B483;
+  --sand-light: #EDD9A3;
+  --dune: #B8935A;
+  --dune-dark: #8B6914;
+  --oasis: #2E6B4F;
+  --oasis-light: #4A9B72;
+  --oasis-pale: #D4EDE1;
+  --ksour: #7A3B1E;
+  --ksour-dark: #5A2810;
+  --sky: #0A2A5C;
+  --sky-light: #1A4A80;
+
+  /* Backgrounds */
+  --dark: #071428;
+  --dark-mid: #0A1C38;
+  --dark-warm: #0D2050;
+  --cream: #FAF6EE;
+  --cream-warm: #F2EAD8;
+  --white: #FFFFFF;
+
+  /* Text */
+  --text: #0A1C38;
+  --text-mid: #5C4A32;
+  --text-light: #8B7355;
+
+  /* Borders */
+  --border: rgba(201, 168, 76, 0.2);
+  --border-mid: rgba(201, 168, 76, 0.4);
+
+  /* Typography */
+  --font-display: 'Playfair Display', serif;
+  --font-body: 'Raleway', sans-serif;
+  --font-arabic: 'Tajawal', sans-serif;
+
+  /* Spacing Scale */
+  --section-pad-x: 5rem;
+  --section-pad-y: 6rem;
+
+  /* Shadows */
+  --shadow-gold: 0 8px 30px rgba(201, 168, 76, 0.3);
+  --shadow-dark: 0 20px 60px rgba(5, 15, 35, 0.55);
+
+  /* Transitions */
+  --transition: all 0.3s ease;
+  --transition-slow: all 0.6s ease;
+}
+
+/* ─── Responsive section padding ─── */
+@media (max-width: 1200px) {
+  :root { --section-pad-x: 2.5rem; }
+}
+@media (max-width: 768px) {
+  :root { --section-pad-x: 1.5rem; --section-pad-y: 4rem; }
+}
+@media (max-width: 599px) {
+  :root { --section-pad-x: 1rem; --section-pad-y: 3rem; }
+}

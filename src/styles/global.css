@@ -1,0 +1,380 @@
+/* ═══════════════════════════════════════════
+   AUTHENTIKA TRAVEL — GLOBAL STYLES
+   ═══════════════════════════════════════════ */
+
+/* ─── Reset ─── */
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: var(--font-body);
+  background: var(--cream);
+  color: var(--text);
+  overflow-x: hidden;
+}
+
+/* ─── Scroll Reveal ─── */
+.reveal {
+  opacity: 0;
+  transform: translateY(22px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ─── Keyframes ─── */
+@keyframes fadeUp   { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes fadeIn   { from { opacity: 0; } to { opacity: 1; } }
+@keyframes twinkle  { 0% { opacity: 0.6; } 100% { opacity: 1; } }
+@keyframes scrollPulse { 0%, 100% { opacity: 0.3; } 50% { opacity: 0.8; } }
+
+/* ─── Section Labels ─── */
+.section-label {
+  font-size: 0.65rem;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 0.8rem;
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+}
+.section-label::before {
+  content: '';
+  display: block;
+  width: 2.5rem;
+  height: 1px;
+  background: linear-gradient(to right, transparent, var(--gold));
+}
+
+.section-title {
+  font-family: var(--font-display);
+  font-size: clamp(1.8rem, 3vw, 2.8rem);
+  font-weight: 400;
+  line-height: 1.2;
+  color: var(--dark);
+  margin-bottom: 1rem;
+}
+.section-title em  { font-style: italic; color: var(--ksour); }
+.section-title.light { color: var(--cream); }
+.section-title.light em { color: var(--gold-light); }
+
+/* ─── Buttons ─── */
+.btn-gold {
+  background: linear-gradient(135deg, var(--gold) 0%, var(--dune) 100%);
+  color: var(--dark);
+  border: none;
+  padding: 1rem 2.2rem;
+  font-family: var(--font-body);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  transition: var(--transition);
+  border-radius: 3px;
+  box-shadow: var(--shadow-gold);
+}
+.btn-gold:hover { transform: translateY(-3px); box-shadow: 0 15px 40px rgba(201,168,76,0.4); }
+
+.btn-ghost {
+  background: transparent;
+  color: var(--gold-light);
+  border: 1px solid rgba(201,168,76,0.35);
+  padding: 1rem 2.2rem;
+  font-family: var(--font-body);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  transition: var(--transition);
+  border-radius: 3px;
+}
+.btn-ghost:hover { background: rgba(201,168,76,0.1); border-color: var(--gold); }
+
+.btn-wa {
+  background: #25D366;
+  color: white;
+  border: none;
+  padding: 0.45rem 0.9rem;
+  font-size: 0.6rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-decoration: none;
+  cursor: pointer;
+  transition: var(--transition);
+  white-space: nowrap;
+  text-transform: uppercase;
+  font-family: var(--font-body);
+}
+.btn-wa:hover { background: #1EBE5A; transform: translateY(-1px); }
+
+.btn-wa-big {
+  background: #25D366;
+  color: white;
+  padding: 0.8rem 1.8rem;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: var(--transition);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  border: none;
+  cursor: pointer;
+  font-family: var(--font-body);
+}
+.btn-wa-big:hover { background: #1EBE5A; transform: translateY(-2px); }
+
+.btn-email-big {
+  background: rgba(201,168,76,0.12);
+  border: 1px solid rgba(201,168,76,0.3);
+  color: var(--gold);
+  padding: 0.8rem 1.5rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-decoration: none;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  transition: var(--transition);
+  cursor: pointer;
+  font-family: var(--font-body);
+}
+.btn-email-big:hover { background: rgba(201,168,76,0.22); }
+
+/* ─── Category Strip ─── */
+.cat-strip {
+  background: var(--dark-warm);
+  border-bottom: 1px solid rgba(201,168,76,0.15);
+  overflow-x: auto;
+  scrollbar-width: none;
+  position: sticky;
+  top: 64px;
+  z-index: 150;
+}
+.cat-strip::-webkit-scrollbar { display: none; }
+.cat-strip-inner { display: flex; min-width: max-content; padding: 0 var(--section-pad-x); }
+.cat-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0 1.5rem;
+  height: 52px;
+  background: none;
+  border: none;
+  border-bottom: 2px solid transparent;
+  color: rgba(250,246,238,0.45);
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: var(--transition);
+  text-decoration: none;
+}
+.cat-btn:hover, .cat-btn.active {
+  color: var(--gold-light);
+  border-bottom-color: var(--gold);
+  background: rgba(201,168,76,0.06);
+}
+
+/* ─── Card link ─── */
+.card-link {
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gold);
+  text-decoration: none;
+  transition: var(--transition);
+}
+.card-link:hover { color: var(--gold-light); }
+
+/* ─── Confirmation box (shared Hotels + Vols) ─── */
+.confirm-box {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(201,168,76,0.25);
+  border-left: 4px solid #25D366;
+  padding: 2.5rem 3rem;
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+  margin-top: 1rem;
+}
+.confirm-box.gold-border { border-left-color: var(--gold); }
+.confirm-title { font-family: var(--font-display); font-size: 1.4rem; color: var(--cream); margin-bottom: 0.8rem; font-weight: 600; }
+.confirm-text  { font-size: 0.85rem; color: rgba(250,246,238,0.6); line-height: 1.8; margin-bottom: 1.2rem; }
+.confirm-summary {
+  background: rgba(201,168,76,0.08);
+  border: 1px solid rgba(201,168,76,0.15);
+  padding: 0.8rem 1.2rem;
+  font-size: 0.78rem;
+  color: var(--gold);
+  margin-bottom: 1.5rem;
+  line-height: 1.8;
+}
+.confirm-actions { display: flex; gap: 1rem; flex-wrap: wrap; align-items: center; }
+.btn-reset {
+  background: none;
+  border: 1px solid rgba(255,255,255,0.15);
+  color: rgba(250,246,238,0.4);
+  padding: 0.8rem 1.2rem;
+  font-size: 0.72rem;
+  cursor: pointer;
+  font-family: var(--font-body);
+  letter-spacing: 0.08em;
+  transition: var(--transition);
+}
+.btn-reset:hover { border-color: rgba(255,255,255,0.3); color: rgba(250,246,238,0.7); }
+
+/* ─── Filter buttons (shared across sections) ─── */
+.filter-bar { display: flex; flex-wrap: wrap; gap: 0.5rem; margin: 2rem 0 2.5rem; }
+
+.filter-btn-light {
+  padding: 0.5rem 1.2rem;
+  background: rgba(42,33,24,0.07);
+  border: 1px solid rgba(139,92,30,0.2);
+  color: rgba(42,33,24,0.55);
+  font-family: var(--font-body);
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  cursor: pointer;
+  transition: var(--transition);
+}
+.filter-btn-light:hover, .filter-btn-light.active { background: var(--ksour); color: white; border-color: var(--ksour); }
+
+.filter-btn-dark {
+  padding: 0.5rem 1.2rem;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(201,168,76,0.15);
+  color: rgba(250,246,238,0.4);
+  font-family: var(--font-body);
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  cursor: pointer;
+  transition: var(--transition);
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+.filter-btn-dark:hover, .filter-btn-dark.active { background: rgba(201,168,76,0.15); color: var(--gold); border-color: var(--gold); }
+
+.filter-count {
+  background: var(--gold);
+  color: var(--dark);
+  font-size: 0.55rem;
+  font-weight: 800;
+  padding: 0.1rem 0.4rem;
+  border-radius: 20px;
+}
+
+/* ─── Shared form styles ─── */
+.form-field { display: flex; flex-direction: column; gap: 0.4rem; margin-bottom: 1.1rem; }
+.form-field label {
+  font-size: 0.62rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--text-light);
+  font-weight: 600;
+}
+.form-field input,
+.form-field select,
+.form-field textarea {
+  background: var(--cream);
+  border: 1px solid var(--gold-pale);
+  color: var(--text);
+  padding: 0.8rem 1rem;
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  outline: none;
+  transition: border-color 0.3s;
+  resize: none;
+}
+.form-field input:focus,
+.form-field select:focus,
+.form-field textarea:focus { border-color: var(--gold); }
+
+.form-row-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+@media (max-width: 599px) { .form-row-2 { grid-template-columns: 1fr; } }
+
+.btn-submit {
+  width: 100%;
+  background: linear-gradient(135deg, var(--ksour) 0%, var(--dune-dark) 100%);
+  color: var(--gold-light);
+  border: none;
+  padding: 1.1rem;
+  font-family: var(--font-body);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: var(--transition);
+}
+.btn-submit:hover { transform: translateY(-2px); box-shadow: 0 10px 30px rgba(90,40,16,0.3); }
+
+/* ─── Gradient utility classes ─── */
+.am1{background:linear-gradient(160deg,#062030,#0A4060,#1A7A9A)}
+.am2{background:linear-gradient(160deg,#0A0620,#200A50,#4020A0)}
+.am3{background:linear-gradient(160deg,#200A06,#501A10,#A03020)}
+.am4{background:linear-gradient(160deg,#062020,#0A5050,#10A090)}
+.am5{background:linear-gradient(160deg,#062010,#0A5020,#1A8A30)}
+.a1{background:linear-gradient(160deg,#8B6914,#C9A84C,#E8C97A)}
+.a2{background:linear-gradient(160deg,#1A3D2E,#2E6B4F,#4A9B72)}
+.a3{background:linear-gradient(160deg,#5C3D1E,#8B4513,#C27040)}
+.a4{background:linear-gradient(160deg,#1A1A3D,#1A3A5C,#2E5F8A)}
+.a5{background:linear-gradient(160deg,#3D1A1A,#7A3B1E,#A85C3A)}
+.a6{background:linear-gradient(160deg,#2A1A08,#5C3D10,#8B6914)}
+.a7{background:linear-gradient(160deg,#0A2A1A,#145C3D,#1E8B5C)}
+.aty{background:linear-gradient(160deg,#0A0A1A,#1A1A40,#30308A)}
+.sw{background:linear-gradient(160deg,#0A0A1A,#1A1A3D,#2E1A5C,#1A0A2E)}
+.oj{background:linear-gradient(160deg,#3D2A08,#7A5214,#C8941E,#E8C040)}
+.om{background:linear-gradient(160deg,#0A1E10,#1A4020,#2E7A3A,#4AAD5C)}
+.an1{background:linear-gradient(160deg,#0A2006,#1A5010,#2A8A20)}
+.an2{background:linear-gradient(160deg,#201006,#503010,#8A6020)}
+.an3{background:linear-gradient(160deg,#1A0A06,#402010,#703520)}
+.an4{background:linear-gradient(160deg,#1A1006,#403010,#705020)}
+.ex1{background:linear-gradient(160deg,#062030,#0A4060,#1A7090)}
+.ex2{background:linear-gradient(160deg,#200A20,#501050,#903090)}
+.ex3{background:linear-gradient(160deg,#201006,#503010,#9A6020)}
+.ex4{background:linear-gradient(160deg,#200A06,#601A10,#A03020)}
+.ex5{background:linear-gradient(160deg,#0A1020,#1A2050,#2A3090)}
+.ex6{background:linear-gradient(160deg,#062010,#0A5030,#1A8050)}
+.ex7{background:linear-gradient(160deg,#201806,#604010,#A07020)}
+.ex8{background:linear-gradient(160deg,#060A20,#101A60,#2030A0)}
+.ex9{background:linear-gradient(160deg,#200806,#501510,#902A20)}
+.ex10{background:linear-gradient(160deg,#062006,#0A5010,#1A8020)}
+.ex11{background:linear-gradient(160deg,#201006,#503010,#805020)}
+.ex12{background:linear-gradient(160deg,#200610,#501020,#902040)}
+.cn1{background:linear-gradient(160deg,#062030,#0A4060,#1A7090)}
+.cn2{background:linear-gradient(160deg,#201806,#504010,#907020)}
+.cn3{background:linear-gradient(160deg,#1A0806,#502010,#904020)}
+.cn4{background:linear-gradient(160deg,#200A06,#603010,#A05020)}
+.cn5{background:linear-gradient(160deg,#0A0A1A,#1A1A40,#30308A)}
+.cn6{background:linear-gradient(160deg,#061806,#104010,#207020)}
+.cn7{background:linear-gradient(160deg,#062018,#0A5030,#1A8050)}
+.cn8{background:linear-gradient(160deg,#180618,#401040,#702070)}
+.heb1{background:linear-gradient(160deg,#3D1E0A,#7A3B14,#B0602A)}
+.heb2{background:linear-gradient(160deg,#1A1A0A,#3D3A14,#7A7228)}
+.heb3{background:linear-gradient(160deg,#0A1A3D,#14285C,#284A8B)}
+.heb4{background:linear-gradient(160deg,#1A0A3D,#3A145C,#6828A0)}
+.heb5{background:linear-gradient(160deg,#0A2A14,#145C28,#2A9048)}
+.heb6{background:linear-gradient(160deg,#2A1A0A,#5C3A14,#986028)}
+.fh1{background:linear-gradient(135deg,var(--oasis),var(--oasis-light))}
+.fh2{background:linear-gradient(135deg,var(--dune-dark),var(--gold))}
+.fh3{background:linear-gradient(135deg,var(--sky),var(--sky-light))}
+.fh4{background:linear-gradient(135deg,var(--ksour-dark),var(--ksour))}
+.fh5{background:linear-gradient(135deg,#3D2A10,#8B6914)}
+.fh6{background:linear-gradient(135deg,#0A2A1A,#2E6B4F)}

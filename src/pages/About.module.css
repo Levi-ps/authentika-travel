@@ -1,0 +1,86 @@
+.section {
+  padding: var(--section-pad-y) var(--section-pad-x);
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  gap: 5rem;
+  align-items: center;
+  background: var(--cream);
+}
+.visual { position: relative; }
+.mainImg {
+  width: 100%; aspect-ratio: 3/4;
+  background: linear-gradient(160deg, var(--dune-dark) 0%, var(--ksour) 50%, var(--dark-warm) 100%);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 8rem; position: relative; overflow: hidden;
+}
+.floatBox {
+  position: absolute; bottom: -2rem; right: -2rem;
+  background: var(--gold); padding: 1.5rem 1.8rem; z-index: 2;
+}
+.floatBox strong {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 2.5rem; font-weight: 400; color: var(--dark); line-height: 1;
+}
+.floatBox span {
+  font-size: 0.65rem; letter-spacing: 0.15em; text-transform: uppercase;
+  color: var(--ksour-dark); font-weight: 700;
+}
+.corner {
+  position: absolute; top: -1.5rem; left: -1.5rem;
+  width: 50px; height: 50px;
+  border-top: 2px solid var(--oasis); border-left: 2px solid var(--oasis);
+}
+.bodyText { font-size: 0.9rem; font-weight: 300; line-height: 1.9; color: var(--text-mid); margin-bottom: 1.5rem; }
+.pillars {
+  display: grid; grid-template-columns: 1fr 1fr 1fr;
+  gap: 1rem; margin-top: 2rem;
+}
+.pillar {
+  display: flex; align-items: flex-start; gap: 0.8rem;
+  padding: 1rem; background: var(--cream-warm);
+  border: 1px solid var(--gold-pale);
+  transition: var(--transition); border-radius: 2px;
+}
+.pillar:hover { background: var(--gold-pale); border-color: var(--sand-light); }
+.pillarIcon { font-size: 1.4rem; flex-shrink: 0; }
+.pillar div strong { display: block; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.06em; color: var(--text); margin-bottom: 0.2rem; }
+.pillar div span { font-size: 0.7rem; color: var(--text-light); font-weight: 400; }
+
+.philoMissions { margin-top: 3rem; display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
+.philoBox {
+  background: var(--dark); padding: 2rem;
+  border-left: 3px solid var(--gold);
+}
+.missionBox {
+  background: var(--gold-pale); border: 1px solid var(--sand-light); padding: 2rem;
+}
+.boxLabel {
+  font-size: 0.62rem; letter-spacing: 0.3em; text-transform: uppercase;
+  font-weight: 700; margin-bottom: 1rem;
+  display: flex; align-items: center; gap: 0.6rem;
+  color: var(--gold);
+}
+.missionLabel { color: var(--ksour); }
+.philoText {
+  font-family: var(--font-display);
+  font-size: 1.05rem; font-style: italic; font-weight: 400;
+  line-height: 1.8; color: var(--cream);
+}
+.missionList { list-style: none; display: flex; flex-direction: column; gap: 0.7rem; }
+.missionList li {
+  display: flex; align-items: flex-start; gap: 0.7rem;
+  font-size: 0.82rem; color: var(--text-mid); line-height: 1.6; font-weight: 400;
+}
+
+@media (max-width: 1200px) {
+  .section { grid-template-columns: 1fr; }
+  .visual { display: none; }
+}
+@media (max-width: 768px) {
+  .pillars { grid-template-columns: 1fr 1fr; }
+  .philoMissions { grid-template-columns: 1fr; gap: 1.5rem; }
+}
+@media (max-width: 599px) {
+  .pillars { grid-template-columns: 1fr; }
+}

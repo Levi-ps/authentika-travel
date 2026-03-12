@@ -1,0 +1,14 @@
+.section { padding: var(--section-pad-y) var(--section-pad-x); background: linear-gradient(160deg, var(--sky) 0%, var(--dark) 100%); position: relative; overflow: hidden; }
+.grid { display: grid; grid-template-columns: 1.2fr 1fr; gap: 4rem; align-items: center; }
+.intro { font-size: 0.88rem; font-weight: 300; color: rgba(250,246,238,0.55); line-height: 1.85; margin-bottom: 0.5rem; }
+.services { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 2.5rem; }
+.service { background: rgba(250,246,238,0.04); border: 1px solid rgba(201,168,76,0.12); padding: 1.4rem; transition: var(--transition); }
+.service:hover { background: rgba(201,168,76,0.07); border-color: rgba(201,168,76,0.3); transform: translateY(-3px); }
+.svcIcon { font-size: 1.8rem; margin-bottom: 0.7rem; display: block; }
+.svcTitle { font-family: var(--font-display); font-size: 1rem; color: var(--cream); margin-bottom: 0.5rem; }
+.svcDesc { font-size: 0.75rem; color: rgba(250,246,238,0.45); line-height: 1.7; font-weight: 300; }
+.formBox { background: rgba(250,246,238,0.04); border: 1px solid rgba(201,168,76,0.2); padding: 2.5rem; backdrop-filter: blur(10px); }
+.formTitle { font-family: var(--font-display); font-size: 1.4rem; color: var(--cream); margin-bottom: 0.5rem; }
+.formSub { font-size: 0.75rem; color: rgba(250,246,238,0.4); margin-bottom: 2rem; line-height: 1.7; font-weight: 300; }
+@media (max-width: 1200px) { .grid { grid-template-columns: 1fr; gap: 3rem; } }
+@media (max-width: 599px) { .services { grid-template-columns: 1fr; } }

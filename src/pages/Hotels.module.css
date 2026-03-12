@@ -1,0 +1,48 @@
+.section { padding: var(--section-pad-y) var(--section-pad-x); background: #0A1C38; position: relative; overflow: hidden; }
+.engine {
+  background: rgba(255,255,255,0.04); border: 1px solid rgba(201,168,76,0.2);
+  border-top: 3px solid var(--gold); padding: 2rem; margin: 2rem 0;
+}
+.row { display: flex; gap: 1rem; align-items: flex-end; flex-wrap: wrap; margin-bottom: 1rem; }
+.field { display: flex; flex-direction: column; gap: 0.4rem; flex: 1; min-width: 140px; }
+.field label { font-size: 0.6rem; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(250,246,238,0.45); font-weight: 600; }
+.input {
+  background: rgba(255,255,255,0.07); border: 1px solid rgba(201,168,76,0.2);
+  color: white; padding: 0.75rem 1rem; font-family: var(--font-body); font-size: 0.82rem;
+  outline: none; transition: border-color 0.3s; width: 100%; appearance: none;
+}
+.input:focus { border-color: rgba(201,168,76,0.6); }
+.nuitsDisplay {
+  background: rgba(255,255,255,0.07); border: 1px solid rgba(201,168,76,0.2);
+  color: var(--gold); padding: 0.75rem 1rem;
+  font-family: var(--font-display); font-size: 1.1rem; font-weight: 600;
+  min-width: 120px; text-align: center;
+}
+.counter { display: flex; align-items: center; border: 1px solid rgba(201,168,76,0.2); overflow: hidden; }
+.counter button {
+  width: 38px; height: 44px; background: rgba(201,168,76,0.1);
+  border: none; color: var(--gold); font-size: 1.3rem; cursor: pointer;
+  transition: background 0.2s; font-weight: 700; flex-shrink: 0;
+}
+.counter button:hover { background: rgba(201,168,76,0.3); }
+.counter span {
+  flex: 1; text-align: center; color: white; font-size: 1rem; font-weight: 700;
+  font-family: var(--font-display); background: rgba(255,255,255,0.04);
+  min-width: 36px; display: flex; align-items: center; justify-content: center; height: 44px;
+}
+.searchBtn {
+  background: linear-gradient(135deg, var(--gold), var(--dune));
+  color: var(--dark); border: none; padding: 0.75rem 2.2rem;
+  font-family: var(--font-body); font-size: 0.78rem; font-weight: 800;
+  letter-spacing: 0.15em; text-transform: uppercase; cursor: pointer;
+  transition: var(--transition); white-space: nowrap; min-height: 44px; align-self: flex-end;
+}
+.searchBtn:hover { transform: translateY(-2px); box-shadow: 0 10px 30px rgba(201,168,76,0.35); }
+.regionTabs { display: flex; gap: 0.5rem; margin-bottom: 2rem; flex-wrap: wrap; }
+.regionBtn {
+  padding: 0.55rem 1.4rem; background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(201,168,76,0.15); color: rgba(250,246,238,0.45);
+  font-family: var(--font-body); font-size: 0.72rem; font-weight: 600;
+  letter-spacing: 0.08em; cursor: pointer; transition: var(--transition);
+}
+.regionBtn:hover, .activeRegion { background: rgba(201,168,76,0.12); color: var(--gold); border-color: var(--gold); }

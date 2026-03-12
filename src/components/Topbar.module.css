@@ -1,0 +1,37 @@
+.topbar {
+  background: #0A1C38;
+  padding: 0.45rem var(--section-pad-x);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(201, 168, 76, 0.15);
+}
+.left { display: flex; gap: 2rem; }
+.item {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.7rem;
+  color: rgba(250, 246, 238, 0.5);
+  letter-spacing: 0.06em;
+}
+.langGroup { display: flex; gap: 0.3rem; }
+.langBtn {
+  background: none;
+  border: 1px solid rgba(201, 168, 76, 0.25);
+  color: rgba(250, 246, 238, 0.4);
+  font-size: 0.65rem;
+  letter-spacing: 0.12em;
+  padding: 0.2rem 0.55rem;
+  cursor: pointer;
+  font-family: var(--font-body);
+  text-transform: uppercase;
+  transition: var(--transition);
+  border-radius: 2px;
+}
+.langBtn:hover, .langBtn.active {
+  background: rgba(201, 168, 76, 0.15);
+  color: var(--gold-light);
+  border-color: rgba(201, 168, 76, 0.5);
+}
+@media (max-width: 768px) { .topbar { display: none; } }

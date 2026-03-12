@@ -1,0 +1,13 @@
+.strip {
+  background: var(--dark-warm);
+  border-bottom: 1px solid rgba(201,168,76,0.15);
+  overflow-x: auto;
+  scrollbar-width: none;
+  position: sticky;
+  top: 64px;
+  z-index: 150;
+}
+.strip::-webkit-scrollbar { display: none; }
+.inner { display: flex; min-width: max-content; padding: 0 var(--section-pad-x); }
+.btn { display: flex; align-items: center; gap: 0.5rem; }
+@media (max-width: 768px) { .strip { top: 58px; } }
