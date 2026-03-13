@@ -118,3 +118,26 @@
   .burger { display: flex; }
   .inner { padding: 0 1.5rem; height: 58px; }
 }
+.langBar {
+  display: flex;
+  gap: 0.8rem;
+  margin-bottom: 1rem;
+}
+.langBtn {
+  background: none;
+  border: 1px solid rgba(201,168,76,0.3);
+  color: rgba(250,246,238,0.5);
+  font-size: 0.8rem;
+  letter-spacing: 0.15em;
+  padding: 0.4rem 1rem;
+  cursor: pointer;
+  font-family: var(--font-body);
+  text-transform: uppercase;
+  border-radius: 2px;
+  transition: all 0.2s;
+}
+.langBtn:hover, .activeLang {
+  background: rgba(201,168,76,0.2);
+  color: var(--gold);
+  border-color: var(--gold);
+}
