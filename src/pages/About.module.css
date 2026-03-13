@@ -75,7 +75,11 @@
 
 @media (max-width: 1200px) {
   .section { grid-template-columns: 1fr; }
-  .visual { display: none; }
+  .visual { display: block; margin-bottom: 2rem; }
+  .mainImg { aspect-ratio: 16/9; }
+  .floatBox { bottom: -1rem; right: -0.5rem; padding: 1rem 1.2rem; }
+  .floatBox strong { font-size: 1.8rem; }
+  .corner { display: none; }
 }
 @media (max-width: 768px) {
   .pillars { grid-template-columns: 1fr 1fr; }
