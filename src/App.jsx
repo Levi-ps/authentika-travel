@@ -38,7 +38,7 @@ export default function App() {
       style={lang === 'ar' ? { fontFamily: "'Tajawal', sans-serif" } : {}}
     >
       {/* ── Overlays ── */}
-      <MobileNav open={mobileOpen} onClose={() => setMobileOpen(false)} lang={lang} />
+     <MobileNav open={mobileOpen} onClose={() => setMobileOpen(false)} lang={lang} setLang={setLang} />
 
       {/* ── Top chrome ── */}
       <Topbar lang={lang} setLang={setLang} />
