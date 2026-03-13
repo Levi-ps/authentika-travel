@@ -1,7 +1,5 @@
 // components/MobileNav.jsx
 import styles from './MobileNav.module.css'
-// components/MobileNav.jsx
-import styles from './MobileNav.module.css'
 export default function MobileNav({ open, onClose, lang, setLang }) {
   const t = (fr, en, ar) => lang === 'fr' ? fr : lang === 'en' ? en : ar
   const links = [
@@ -34,4 +32,3 @@ export default function MobileNav({ open, onClose, lang, setLang }) {
       ))}
     </div>
   )
-
