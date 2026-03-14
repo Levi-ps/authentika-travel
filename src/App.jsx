@@ -1,4 +1,5 @@
 // App.jsx — Authentika Travel React App
+import MapSection from './components/MapSection'
 import Destinations from './pages/Destinations'
 import { useState } from 'react'
 import { useLanguage } from './hooks/useLanguage'
@@ -64,6 +65,7 @@ export default function App() {
         <Mice         t={t} />
         <Formations   t={t} lang={lang} />
         <Testimonials t={t} lang={lang} />
+        <MapSection t={t} />
         <Contact      t={t} />
       </main>
 
