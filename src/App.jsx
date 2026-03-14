@@ -1,5 +1,4 @@
 // App.jsx — Authentika Travel React App
-import Hotels from './pages/Hotels'
 import { useState } from 'react'
 import { useLanguage } from './hooks/useLanguage'
 import { useReveal } from './hooks/useReveal'
