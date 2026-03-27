@@ -1,6 +1,7 @@
 // App.jsx — Authentika Travel React App
 
 
+
 import { useState } from 'react'
 import { useLanguage } from './hooks/useLanguage'
 import { useReveal } from './hooks/useReveal'
