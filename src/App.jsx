@@ -1,6 +1,6 @@
 // App.jsx — Authentika Travel React App
 
-import Destinations from './pages/Destinations'
+
 import { useState } from 'react'
 import { useLanguage } from './hooks/useLanguage'
 import { useReveal } from './hooks/useReveal'
@@ -56,7 +56,7 @@ export default function App() {
       <main>
         <About        t={t} lang={lang} />
         <Hotels       t={t} />
-        <Destinations t={t} />
+        
         <Vols         t={t} />
         <Activities   t={t} lang={lang} />
         <Excursions   t={t} lang={lang} />
