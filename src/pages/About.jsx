@@ -1,6 +1,6 @@
 // pages/About.jsx
 import styles from './About.module.css'
-import desertPhoto from '../assets/01_0_53719700-1758804826.jpg'
+import desertPhoto from '../assets/01_0.53719700-1758804826.jpg'
 const PILLARS = [
   { icon:'🌊', fr:'Mer & Bien-être',       en:'Sea & Wellness',       ar:'البحر والعافية',      sub:'Djerba · Zarzis · Thalasso · Spa' },
   { icon:'🏜️',fr:'Désert & Aventure',      en:'Desert & Adventure',   ar:'الصحراء والمغامرة',  sub:'Erg Oriental · Ksour · Oasis' },

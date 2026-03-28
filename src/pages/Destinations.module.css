@@ -1,0 +1,5 @@
+.section { padding: 60px 20px; background: #0A1C38; text-align: center; }
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; max-width: 1200px; margin: 0 auto; }
+.card { position: relative; height: 300px; border-radius: 10px; overflow: hidden; border: 1px solid var(--gold); }
+.card img { width: 100%; height: 100%; object-fit: cover; }
+.overlay { position: absolute; bottom: 0; width: 100%; background: rgba(0,0,0,0.6); color: var(--gold); padding: 10px; }

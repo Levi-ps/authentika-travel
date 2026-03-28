@@ -1,0 +1,2 @@
+.section { padding: 60px 20px; background: #0A1C38; text-align: center; }
+.mapContainer { max-width: 1200px; margin: 30px auto; border: 2px solid var(--gold); border-radius: 10px; overflow: hidden; }
